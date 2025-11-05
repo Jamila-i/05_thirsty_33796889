@@ -86,6 +86,21 @@ The main purpose of this lab was to explore **templating**, **routing**, and **f
 ## How to run it
 
 1. Open your terminal and clone or upload the project
-2. Install the required packages: npm install
-3. Start the server: node index.js
-4. Open your browser and go to: http://localhost:8000
+2. Install dependencies
+
+```
+npm install
+express ejs
+```
+
+3. Run the server
+
+```
+node index.js
+```
+
+4. Open your browser and go to
+
+```
+http://localhost:8000
+```
