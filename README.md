@@ -1,4 +1,4 @@
-# SipJam – Thirsty Student Shop (Lab 5)
+# SipJam
 
 This project was created for my **Dynamic Web Applications** module.  
 It’s a Node.js and Express web application that uses **EJS templates** to dynamically display data for a fictional drinks shop called **SipJam**.
@@ -7,7 +7,7 @@ The main purpose of this lab was to explore **templating**, **routing**, and **f
 
 ---
 
-## 💻 Technologies Used
+## Technologies Used
 
 ### Backend
 
@@ -55,8 +55,9 @@ The main purpose of this lab was to explore **templating**, **routing**, and **f
 
 ---
 
-## 🧭 Folder Structure
+## Folder Structure
 
+```
 05_THIRSTY_33796889/
 │
 ├── public/
@@ -78,6 +79,7 @@ The main purpose of this lab was to explore **templating**, **routing**, and **f
 ├── index.js
 ├── package.json
 └── README.md
+```
 
 ---
 
