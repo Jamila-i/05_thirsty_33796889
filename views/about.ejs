@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= shopName %></title>
+    <title><%= shopName %> - About</title>
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
+    <!-- the header (navigation bar) for pages -->
+    <%- include("partials/header.ejs") %>
+
+    <!-- Main page heading -->
     <h1>About <%= shopName %></h1>
-    <p>We sell all sorts of drinks</p>
+
+    <!-- Short intro paragraph about SipJam -->
+    <p>
+      At <%= shopName %>, we craft delicious drinks that brighten your day —
+      from creamy bubble teas to smooth coffee blends. Sip, enjoy, repeat.
+    </p>
+
+    <!-- Displaying each shop location dynamically using EJS -->
+    <h2>Our Shop Locations</h2>
+
+    <ul>
+      <% for (let i = 0; i < shops.length; i++) { %>
+      <li>
+        <strong><%= shops[i].location %></strong><br />
+        Manager: <%= shops[i].manager %><br />
+        Address: <%= shops[i].address %>
+      </li>
+      <% } %>
+    </ul>
   </body>
 </html>

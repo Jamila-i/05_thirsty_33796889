@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= shopName %> - Survey Results</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- the header (navigation bar) for pages -->
+    <%- include("partials/header.ejs") %>
+
+    <!-- Main page heading -->
+    <h1>Survey Results</h1>
+
+    <!-- Displays the users submitted survey data -->
+    <div class="result-wrapper">
+      <div class="result-card">
+        <h2>Thank you, <%= first %> <%= last %>!</h2>
+        <p><strong>Email:</strong> <%= email %></p>
+        <p><strong>Age:</strong> <%= age %></p>
+        <p><strong>Preferred Drink Category:</strong> <%= drink %></p>
+        <p>
+          <strong>Student:</strong>
+          <%= isStudent ? "Yes, I am a student" : "No, I am not a student" %>
+        </p>
+        <a href="/survey" class="back-link">← Back to Survey</a>
+      </div>
+    </div>
+  </body>
+</html>

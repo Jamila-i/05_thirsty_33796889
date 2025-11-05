@@ -9,9 +9,15 @@ const port = 8000;
 // Tell Express that we want to use EJS as the templating engine
 app.set("view engine", "ejs");
 
+// Set up the body parser
+app.use(express.urlencoded({ extended: true }));
+
+// Serve static files (like CSS) from the "public" folder
+app.use(express.static("public"));
+
 // Load the route handlers
 const mainRoutes = require("./routes/main");
 app.use("/", mainRoutes);
 
 // Start the web app listening
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`Example app listening on port ${port}`));

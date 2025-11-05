@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= shopName %> - Customer Survey</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- the header (navigation bar) for pages -->
+    <%- include("partials/header.ejs") %>
+
+    <!-- Page heading-->
+    <h1>Customer Survey</h1>
+    <p style="text-align: center; max-width: 600px; margin: 0 auto">
+      Thank you for visiting <strong><%= shopName %></strong>! Please take a
+      moment to share a few details with us — we’d love to know more about our
+      amazing customers.
+    </p>
+
+    <!-- POST form- collects user input and sends it to /survey_submitted -->
+    <form method="POST" action="/survey_submitted">
+      <h3>Personal Information</h3>
+
+      <!-- Basic text inputs -->
+      <label for="firstname">First Name:</label>
+      <input
+        id="firstname"
+        type="text"
+        name="first"
+        placeholder="Enter your first name"
+        required
+      />
+
+      <label for="surname">Surname:</label>
+      <input
+        id="surname"
+        type="text"
+        name="last"
+        placeholder="Enter your surname"
+        required
+      />
+
+      <!-- Email input field with pattern validation -->
+      <label for="email">Email Address:</label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        pattern=".+@.+\..+"
+        title="Please enter a valid email address (e.g. name@example.com)"
+        placeholder="example@email.com"
+        required
+      />
+
+      <h3>Survey Questions</h3>
+
+      <!-- Age input -->
+      <label for="age">How old are you?</label>
+      <input
+        id="age"
+        type="number"
+        name="age"
+        min="10"
+        max="120"
+        placeholder="Enter your age"
+        required
+      />
+
+      <!-- Display drink options dynamically using EJS. Loop creates a radio button for each drink category -->
+      <label
+        >Which of the following drink categories do you consume most?</label
+      >
+      <% for (let i = 0; i < productCategories.length; i++) { %>
+      <label class="inline-option">
+        <input
+          type="radio"
+          name="drink"
+          value="<%= productCategories[i] %>"
+          required
+        />
+        <%= productCategories[i] %>
+      </label>
+      <% } %>
+
+      <!-- Checkbox for student status -->
+      <label>Are you a student?</label>
+      <label class="inline-option">
+        <input type="checkbox" name="student" value="Yes" />
+        Yes, I am a student
+      </label>
+
+      <!-- Submit button -->
+      <input type="submit" value="Submit Survey" />
+    </form>
+  </body>
+</html>

@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Welcome to <%= shopName %></title>
+    <title><%= shopName %></title>
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <h1><%= shopName %> Shop</h1>
-    <h2>Here are some things that we sell:</h2>
+    <!-- the header (navigation bar) for pages -->
+    <%- include("partials/header.ejs") %>
 
+    <!-- Main heading -->
+    <h1>Welcome to <%= shopName %></h1>
+    <h2>Check out our delicious drinks:</h2>
+
+    <!-- EJS loop that lists all product categories -->
     <ul>
       <% for (let i = 0; i < productCategories.length; i++) { %>
       <li><%= productCategories[i] %></li>

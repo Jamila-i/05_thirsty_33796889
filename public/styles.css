@@ -1,0 +1,212 @@
+/* ---------- Base Page Style ---------- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f9fa;
+  color: #453442;
+  margin: 0;
+  padding-top: 80px;
+  line-height: 1.6;
+}
+
+/* ---------- Headings ---------- */
+h1 {
+  color: #d461a2;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #543e4e;
+  text-align: center;
+}
+
+/* ---------- Header ---------- */
+.header {
+  background-color: #d461a2; /* brand pink */
+  padding: 15px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* keeps it above all other content */
+}
+
+.header-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header-left .brand {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.header-right a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.header-right a:hover {
+  color: #ffdc00; /* gold hover highlight */
+}
+
+/* ---------- Navigation Links ---------- */
+.nav {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.nav a {
+  color: #d461a2;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Lists ---------- */
+ul {
+  list-style-type: none;
+  background: #fff;
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+li {
+  background: #fff;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect to make list items feel clickable */
+li:hover {
+  background-color: #fce4f2;
+  transform: scale(1.02); /* small zoom effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* slightly deeper shadow */
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* ---------- Forms ---------- */
+form {
+  background: #fff;
+  padding: 40px 50px;
+  max-width: 500px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #d461a2;
+  outline: none;
+}
+
+/* Submit button */
+input[type="submit"] {
+  background-color: #d461a2;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #f97fc4;
+}
+
+/* ---------- Survey Page Inputs ---------- */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* ---------- Survey Results Card ---------- */
+.result-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.result-card {
+  background: #fff;
+  padding: 30px 40px;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  text-align: left;
+}
+
+/* Heading inside card */
+.result-card h2 {
+  color: #d461a2;
+  margin-bottom: 15px;
+}
+
+/* Paragraphs inside card */
+.result-card p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #453442;
+  text-align: left !important;
+}
+
+/* Back link styling */
+.back-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #d461a2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Footer or Small Text ---------- */
+p {
+  text-align: center;
+}

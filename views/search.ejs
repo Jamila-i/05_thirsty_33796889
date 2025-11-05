@@ -2,10 +2,37 @@
 <html>
   <head>
     <title><%= shopName %> - Search</title>
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
+    <!-- the header (navigation bar) for pages -->
+    <%- include("partials/header.ejs") %>
+
+    <!-- Page heading -->
     <h1>Search at <%= shopName %></h1>
-    <p>This is the search page!</p>
-    <p><a href="/">Home</a> • <a href="/about">About</a></p>
+
+    <!-- Basic GET form that sends search data through the URL -->
+    <form action="/search_result" method="GET">
+      <!-- Search input field -->
+      <label for="search_box">Search Text:</label>
+      <input
+        id="search_box"
+        type="text"
+        name="search_text"
+        placeholder="Type a drink..."
+      />
+
+      <!-- Category input field -->
+      <label for="category">Category:</label>
+      <input
+        id="category"
+        type="text"
+        name="category"
+        placeholder="e.g. Smoothies & Shakes"
+      />
+
+      <!-- Submit button -->
+      <input type="submit" value="OK" />
+    </form>
   </body>
 </html>
